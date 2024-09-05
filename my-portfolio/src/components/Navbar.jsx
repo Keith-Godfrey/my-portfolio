@@ -1,14 +1,14 @@
 import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
 import Button from 'react-bootstrap/Button';
+
 
 function NavBar() {
   return (
     <Container>
-      <Navbar>
+      
         <Navbar expand="lg" className="bg-body-tertiary" >
+        <h1 class="KG">Keith Godfrey</h1>
 
 
           <Button variant="primary">About Me</Button>{' '}
@@ -18,7 +18,7 @@ function NavBar() {
 
 
 
-      </Navbar>
+
     </Container>
   );
 }

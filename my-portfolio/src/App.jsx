@@ -7,7 +7,7 @@ function App() {
     return (
       <div>
         <NavBar />
-        {/* Other components or content */}
+        
       </div>
     );
   }
