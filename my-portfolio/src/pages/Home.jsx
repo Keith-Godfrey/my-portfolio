@@ -1,6 +1,6 @@
 export default function Home() {
     return (
-      <div style={{backgroundColor: 'black', color: 'gold', height: '400px' }}>
+      <div>
         <h1>Home Page</h1>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque
@@ -17,3 +17,4 @@ export default function Home() {
       </div>
     );
   }
+  

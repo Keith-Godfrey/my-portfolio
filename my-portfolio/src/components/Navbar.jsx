@@ -1,25 +1,31 @@
-import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
 import Button from 'react-bootstrap/Button';
-
+import { Link, useLocation } from 'react-router-dom';
 
 function NavBar() {
+  const { pathname } = useLocation(); // Get current URL path
+  const navItems = [
+    { to: '/', label: 'Home' },
+    { to: '/About', label: 'About Me' },
+    { to: '/Portfolio', label: 'Portfolio' },
+    { to: '/Contact', label: 'Contact' },
+  ];
+
   return (
-    <Container>
-      
-        <Navbar expand="lg" className="bg-body-tertiary" >
-        <h1 class="KG">Keith Godfrey</h1>
-
-
-          <Button variant="primary">About Me</Button>{' '}
-          <Button variant="primary">Projects</Button>{' '}
-          <Button variant="primary">Contact</Button>{' '}
-        </Navbar>
-
-
-
-
-    </Container>
+    <Navbar expand="lg" className="bg-body-tertiary">
+      <nav className="nav nav-tabs">
+        <Navbar.Brand className="KG">Keith Godfrey</Navbar.Brand>
+        {navItems.map((item) => (
+          <li key={item.to} className="nav-item">
+            <Link
+              to={item.to}
+              className={`nav-link ${pathname === item.to ? 'active' : ''}`}>
+              {item.label}
+            </Link>
+          </li>
+        ))}
+      </nav>
+    </Navbar>
   );
 }
 

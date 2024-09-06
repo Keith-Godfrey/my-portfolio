@@ -1,9 +1,9 @@
 
 
 
-.navbar {
+.nav-tabs {
   height: 25%;
-  width: 100%;
+
   font-size: 20px;
   display: flex;
   flex-wrap: wrap;
@@ -21,6 +21,8 @@
 }
 
 .KG {
+  width: 75%;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 40px; 
   color: darkblue;
   display: flex;
@@ -30,3 +32,4 @@
   
   
 }
+

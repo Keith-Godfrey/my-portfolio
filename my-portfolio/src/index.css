@@ -65,3 +65,55 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+/* start styles to <footer> */
+footer {
+  background-position-x: 0%;
+  background-position-y: 0%;
+  background: #0D1B2A;
+  font-weight: bold;
+  width: 100vw;
+  height: 80px;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  /* border-radius: 20px; */
+  box-shadow:
+    rgba(59, 57, 80, 0.2) 2px 0 2px,
+    rgba(0, 0, 0, 0.2) 4px 0 4px,
+    rgba(0, 0, 0, 0.2) 8px 0 8px,
+    rgba(0, 0, 0, 0.2) 16px 0 16px,
+    rgba(0, 0, 0, 0.2) 32px 0 32px,
+    rgba(89, 70, 196, 0.2) 64px 0 64px;
+}
+footer h2 {
+
+  color: #E0E1DD;
+  font-size: 15px;
+  margin: 0;
+}
+
+footer p {
+  color: #E0E1DD;
+  font-size: 15px;
+  margin: 0;
+  text-align: center;
+
+}
+
+footer div {
+
+  line-height: 1.5;
+  /* text-align: right; */
+}
+
+footer a {
+  color: #E0E1DD;
+}
+
+footer a:hover {
+  color: #328C83;
+  transition: .5s ease;
+}
