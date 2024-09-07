@@ -1,9 +1,9 @@
 import Navbar from 'react-bootstrap/Navbar';
 import Button from 'react-bootstrap/Button';
-import { Link, useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 function NavBar() {
-  const { pathname } = useLocation(); // Get current URL path
+  // const { pathname } = useLocation(); // Get current URL path
   const navItems = [
     { to: '/', label: 'Home' },
     { to: '/About', label: 'About Me' },
@@ -13,18 +13,18 @@ function NavBar() {
 
   return (
     <Navbar expand="lg" className="bg-body-tertiary">
+
       <nav className="nav nav-tabs">
-        <Navbar.Brand className="KG">Keith Godfrey</Navbar.Brand>
-        {navItems.map((item) => (
-          <li key={item.to} className="nav-item">
-            <Link
-              to={item.to}
-              className={`nav-link ${pathname === item.to ? 'active' : ''}`}>
+      <Navbar.Brand className="KG">Keith Godfrey</Navbar.Brand>
+      {navItems.map((item) => (
+          <Link key={item.to} to={item.to}>
+            <Button variant="primary" className="m-2">
               {item.label}
-            </Link>
-          </li>
+            </Button>
+          </Link>
         ))}
       </nav>
+
     </Navbar>
   );
 }
