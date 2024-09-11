@@ -8,7 +8,7 @@ import './index.css'
 
 import About from './pages/About';
 import Portfolio from './pages/Portfolio';
-import Contact from './pages/Contact';
+// import Contact from './pages/Contact';
 import Resume from './pages/Resume';
 import Home from './pages/Home';
 
@@ -20,7 +20,7 @@ root.render(
         <Route path="/" element={<App />}>
           <Route index element={<Home />} />
           <Route path="/Portfolio" element={<Portfolio />} />
-          <Route path="/Contact" element={<Contact />} />
+          {/* <Route path="/Contact" element={<Contact />} /> */}
           <Route path="/Resume" element={<Resume />} />
           <Route path="/About" element={<About />} />
         </Route>

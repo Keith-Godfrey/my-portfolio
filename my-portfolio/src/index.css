@@ -1,11 +1,8 @@
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
-   font-weight: 400;
+  font-weight: 400;
   color-scheme: light dark;
-  color: green;
-
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -13,19 +10,20 @@
 }
 
 a {
+  margin-top: auto;
   font-weight: 500;
-  color: #646cff;
+  color: #415a77;
   text-decoration: inherit;
 }
 a:hover {
-  color: #535bf2;
+  color: #415a77;
 }
 
-.body {
+body {
+  height: 100%;
   margin: 0;
   display: flex;
-  background-color: blue;
-  min-width: 320px;
+  background-color: #e0e1dd;  min-width: 320px;
   min-height: 100vh;
 }
 
@@ -34,19 +32,21 @@ h1 {
   line-height: 1.1;
 }
 
+
 button {
   border-top-left-radius: 18px;
   border-top-right-radius: 18px;
   border-bottom-left-radius: 10 px;
   border-bottom-right-radius: 10 px;
   border: 1px solid transparent;
-  padding: 0.6em 1.2em 1.0em;
+  padding: 0.6em 1.2em .99em;
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
   background-color: #ffffff;
   cursor: pointer;
   transition: border-color 0.25s;
+  color: ffb510;
   
 }
 button:hover {
@@ -62,8 +62,8 @@ button:hover {
 }
 button:focus,
 button:focus-visible {
-  border: 2px;
   background-image: linear-gradient(#fff,#fff,#fff,#fff,#C0C0C0,#9795b1);
+  color: #0d1b2a;
 }
 
 @media (prefers-color-scheme: light) {
@@ -76,6 +76,7 @@ button:focus-visible {
   }
   button {
     background-color: solid transparent;
+    background-image: linear-gradient(#fff,#fff,#fff,#fff,#C0C0C0,#9795b1);
   }
 }
 
@@ -87,11 +88,12 @@ footer {
   font-weight: bold;
   width: 100vw;
   height: 80px;
-  position: fixed;
+  /* position: fixed; */
   bottom: 0;
   display: flex;
   justify-content: space-around;
   align-items: center;
+  z-index: 1000; /* Ensure it stays above other content */
 }
 footer h2 {
 
@@ -121,4 +123,38 @@ footer a {
 footer a:hover {
   color: #328C83;
   transition: .5s ease;
+}
+
+
+.card {
+  margin: 15px; /* Space between cards */
+  border: none; /* Remove default border */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 8px #0D1B2A; /* Subtle shadow */
+  transition: transform 0.2s, box-shadow 0.2s; /* Smooth transition for hover effect */
+}
+
+.card:hover {
+  transform: translateY(-5px); /* Lift effect on hover */
+  box-shadow: 0 8px 16px #0D1B2A; /* Enhanced shadow on hover */
+}
+
+.card-img-top {
+  border-top-left-radius: 10px; /* Rounded top corners */
+  border-top-right-radius: 10px; /* Rounded top corners */
+}
+
+.card-title {
+  font-size: 1.5rem; /* Larger title font size */
+  font-weight: bold; /* Bold title */
+  color: #415a77; /* Custom color for title */
+}
+
+.card-text {
+  color: #555; /* Darker text for description */
+  font-size: 1rem; /* Standard font size for description */
+}
+
+.card-body {
+  padding: 20px; /* Padding inside the card */
 }

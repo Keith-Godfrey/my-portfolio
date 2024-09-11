@@ -3,20 +3,34 @@ import Button from 'react-bootstrap/Button';
 import { Link } from 'react-router-dom';
 
 function NavBar() {
-  // const { pathname } = useLocation(); // Get current URL path
+
   const navItems = [
     { to: '/', label: 'Home' },
     { to: '/About', label: 'About Me' },
     { to: '/Portfolio', label: 'Portfolio' },
-    { to: '/Contact', label: 'Contact' },
+    { to: '/Resume', label: 'Resume' },
   ];
 
   return (
-    <Navbar expand="lg" className="bg-body-tertiary">
+    <Navbar expand="lg" className="bg-body-tertiary" style={{ width: '100vw' }}>
 
       <nav className="nav nav-tabs">
-      <Navbar.Brand className="KG">Keith Godfrey</Navbar.Brand>
-      {navItems.map((item) => (
+        <Navbar.Brand className="KG">
+          <div class="box">
+
+            <div class="title">
+              <span class="block"></span>
+              <h1>Keith Godfrey<span></span></h1>
+            </div>
+
+            <div class="role">
+              <div class="block"></div>
+              <p>Full-Stack Developer</p>
+            </div>
+
+          </div>
+        </Navbar.Brand>
+        {navItems.map((item) => (
           <Link key={item.to} to={item.to}>
             <Button variant="primary" className="m-2">
               {item.label}
